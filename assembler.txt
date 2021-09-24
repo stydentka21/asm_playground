@@ -1,0 +1,28 @@
+1)MOV [16], 1
+2)MOV A, 128
+	.loop: 
+	MOV [A], 1
+	INC A
+	CMP A, 144
+	JNZ .loop: 
+3)MOV A, 230
+	.loop: 
+	MOV [A], 1
+	INC A
+	CMP A, 255
+	JNZ .loop: 	
+4)MOV A, 231
+	.loop: 
+	MOV C, ')'
+	INC A
+	MOV [A], C
+	CMP A, 255
+	JNZ .loop: 	 
+5)MOV A, 231
+MOV C, 0x30
+	.loop: 
+        INC A
+	MOV [A], C
+        INC C
+	CMP A, 241
+	JNZ .loop: 	
